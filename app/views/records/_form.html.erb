@@ -1,5 +1,8 @@
 <%= simple_form_for [@artist, @record] do |f| %>
   <%= f.input :title %>
   <%= f.input :image_url %>
-  <%= f.submit %>
+  <div>
+    <%= link_to "Cancel", :back, class: "btn btn-primary" %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
 <% end %>
