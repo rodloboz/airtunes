@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :artists do
     resources :records, only: %i(new create)
+    resources :artist_tags, only: %i(new create)
   end
 
   resources :records, only: [:destroy]

@@ -4,8 +4,14 @@
   </div>
   <div class="artist-menu">
     <h1><%= @artist.name %></h1>
+    <div id="artist-tags">
+      <% @artist.tags.each do |tag| %>
+        <div class="tag"><%= tag.name %></div>
+      <% end %>
+    </div>
     <%= link_to "Artists", artists_path  %> |
-    <%= link_to "Add Record", new_artist_record_path(@artist) %>
+    <%= link_to "Add Record", new_artist_record_path(@artist) %> |
+    <%= link_to "Add Tags", new_artist_artist_tag_path(@artist)  %>
   </div>
 </div>
 

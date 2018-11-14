@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Add Tags to <%= @artist.name %></h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= simple_form_for([@artist, @artist_tag]) do |f| %>
+        <%= f.input :tag, collection: Tag.list_names,
+          input_html: { multiple: true,
+          include_blank: false } %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
